@@ -196,9 +196,7 @@ class ProposalProvider:
         return compute_proposals(img, num_proposals, min_w, min_h)
 
 if __name__ == '__main__':
-    # TODO: reading the image will be done externally
     import cv2
-
     image_file = r"C:\src\CNTK\Examples\Image\DataSets\Pascal\VOCdevkit\VOC2007\JPEGImages\000015.jpg"
     img = cv2.imread(image_file)
 

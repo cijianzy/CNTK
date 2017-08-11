@@ -62,7 +62,6 @@ class ObjectDetectionMinibatchSource(UserMinibatchSource):
     def bbiw_si(self):
         return self.bbiw_si
 
-    # TODO have plain, w_prop, w_prop_and_targets and just return data
     def next_minibatch(self, num_samples, number_of_workers=1, worker_rank=1, device=None, input_map=None):
         if num_samples > 1:
             print("Only single item mini batches are supported currently by od_mb_source.py")

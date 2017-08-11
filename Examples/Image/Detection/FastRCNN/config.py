@@ -28,7 +28,7 @@ __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 # Learning parameters
 __C.CNTK.L2_REG_WEIGHT = 0.0005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
-__C.CNTK.MAX_EPOCHS = 10 # use more epochs and more ROIs (NUM_ROI_PROPOSALS) for better results
+__C.CNTK.MAX_EPOCHS = 20 # use more epochs and more ROIs (NUM_ROI_PROPOSALS) for better results
 __C.CNTK.LR_FACTOR = 1.0
 __C.CNTK.LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001]
 # The learning rate multiplier for all bias weights
@@ -53,7 +53,7 @@ __C.IMAGE_WIDTH = 850
 __C.IMAGE_HEIGHT = 850
 
 # Use horizontally-flipped images during training?
-__C.TRAIN.USE_FLIPPED = True
+__C.TRAIN.USE_FLIPPED = False
 # If set to 'True' conv layers weights from the base model will be trained, too
 __C.TRAIN_CONV_LAYERS = True
 # Sigma parameter for smooth L1 loss in the RPN and the detector (DET)
