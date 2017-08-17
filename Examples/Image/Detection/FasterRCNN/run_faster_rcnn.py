@@ -31,7 +31,6 @@ if __name__ == '__main__':
     # train and test
     trained_model = train_faster_rcnn(cfg)
     eval_results = compute_test_set_aps(trained_model, cfg)
-    eval_results = compute_test_set_aps(trained_model, cfg)
 
     # write AP results to output
     for class_name in eval_results: print('AP for {:>15} = {:.4f}'.format(class_name, eval_results[class_name]))

@@ -26,7 +26,6 @@ from _cntk_py import force_deterministic_algorithms
 abs_path = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(abs_path, ".."))
 from utils.rpn.rpn_helpers import create_rpn, create_proposal_target_layer, add_proposal_layer
-from utils.rpn.cntk_smoothL1_loss import SmoothL1Loss
 from utils.annotations.annotations_helper import parse_class_map_file
 from utils.od_mb_source import ObjectDetectionMinibatchSource
 from utils.proposal_helpers import ProposalProvider

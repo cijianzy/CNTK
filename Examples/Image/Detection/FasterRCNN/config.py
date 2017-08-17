@@ -20,13 +20,13 @@ cfg = __C
 __C.CNTK = edict()
 
 # If set to 'True' training will be skipped if a trained model exists already
-__C.CNTK.MAKE_MODE = True
+__C.CNTK.MAKE_MODE = False
 # E2E or 4-stage training
 __C.CNTK.TRAIN_E2E = True
 # set to 'True' to use determininistic algorithms
 __C.CNTK.FORCE_DETERMINISTIC = False
 # set to 'True' to run only a single epoch
-__C.CNTK.FAST_MODE = False
+__C.CNTK.FAST_MODE = True
 # Debug parameters
 __C.CNTK.DEBUG_OUTPUT = False
 __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"

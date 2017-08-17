@@ -28,14 +28,14 @@ __C.CNTK.GRAPH_TYPE = "png" # "png" or "pdf"
 # Learning parameters
 __C.CNTK.L2_REG_WEIGHT = 0.0005
 __C.CNTK.MOMENTUM_PER_MB = 0.9
-__C.CNTK.MAX_EPOCHS = 20 # use more epochs and more ROIs (NUM_ROI_PROPOSALS) for better results
+__C.CNTK.MAX_EPOCHS = 15 # use more epochs and more ROIs (NUM_ROI_PROPOSALS) for better results
 __C.CNTK.LR_FACTOR = 1.0
 __C.CNTK.LR_PER_SAMPLE = [0.001] * 10 + [0.0001] * 10 + [0.00001]
 # The learning rate multiplier for all bias weights
 __C.CNTK.BIAS_LR_MULT = 2.0
 
 # Number of regions of interest [ROIs] proposals
-__C.NUM_ROI_PROPOSALS = 100 # use 2000 or more for good results
+__C.NUM_ROI_PROPOSALS = 500 # use 2000 or more for good results
 # minimum width and height for proposals in pixels
 __C.PROPOSALS_MIN_W = 20
 __C.PROPOSALS_MIN_H = 20
