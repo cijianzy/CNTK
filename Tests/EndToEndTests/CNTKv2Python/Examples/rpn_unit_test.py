@@ -202,8 +202,3 @@ def test_anchor_target_layer():
     assert np.allclose(cntk_bbox_targets, caffe_bbox_targets, rtol=0.0, atol=0.0)
     assert np.allclose(cntk_bbox_inside_w, caffe_bbox_inside_w, rtol=0.0, atol=0.0)
     print("Verified AnchorTargetLayer")
-
-if __name__ == '__main__':
-    test_proposal_layer()
-    test_proposal_target_layer()
-    test_anchor_target_layer()
