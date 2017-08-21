@@ -29,7 +29,7 @@ def get_configuration(detector_name):
 
 if __name__ == '__main__':
     # Currently supported detectors: 'FastRCNN', 'FasterRCNN'
-    cfg = get_configuration('FastRCNN')
+    cfg = get_configuration('FasterRCNN')
 
     # train and test
     eval_model = od.train_object_detector(cfg)

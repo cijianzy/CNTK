@@ -2,12 +2,12 @@
 
 ## Overview
 
-This folder contains an end-to-end demo to try different object detectors, base models and data sets. The script will do the following:
+This folder contains an end-to-end demo to try different object detectors, base models and data sets. The script `DetectionDemo.py` will do the following:
 
 * Train a detector on a specified training set
 * Compute average precision per class and mAP on the test set
 * Detect objects in a single image (without using a reader)
-* Filter the detection using NMS (non maximum suppression) and display the boxes on the image
+* Filter the detected objects using NMS (non maximum suppression) and display the boxes on the image
 
 ## Running the example
 
@@ -23,18 +23,18 @@ The code uses prebuild Cython modules for parts of the region proposal network (
 These binaries are contained in the repository for Python 3.5 under Windows and Python 3.4 under Linux.
 If you require other versions please follow the instructions at [https://github.com/rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn#installation-sufficient-for-the-demo).
 
-If you want to use the debug output you need to run ' pip install pydot_ng) ([website](https://pypi.python.org/pypi/pydot-ng)) and install [graphviz](http://graphviz.org/) (GraphViz executable has to be in the system’s PATH) to be able to plot the CNTK graphs.
+If you want to use the debug output you need to run `pip install pydot_ng` ([website](https://pypi.python.org/pypi/pydot-ng)) and install [graphviz](http://graphviz.org/) to be able to plot the CNTK graphs (the GraphViz executable has to be in the system’s PATH).
 
 ### Getting the data and AlexNet model
 
-We use a toy dataset of images captured from a refrigerator to demonstrate Fast R-CNN. Both the dataset and the pre-trained AlexNet model can be downloaded by running the following Python command from the Examples/Image/Detection/FastRCNN folder:
+We use a toy dataset of images captured from a refrigerator to demonstrate object detection with CNTK. Both the dataset and the pre-trained AlexNet model can be downloaded by running the following Python command from the Examples/Image/Detection/FastRCNN folder:
 
 `python install_data_and_model.py`
 
 After running the script, the toy dataset will be installed under the `Image/DataSets/Grocery` folder. The AlexNet model will be downloaded to the `Image/PretrainedModels` folder. 
-We recommend you to keep the downloaded data in the respective folder while downloading, as the configuration files in this folder assumes that by default.
+We recommend you to keep the downloaded data in the respective folder while downloading, as the configuration files assume that by default.
 
-To download the Pascal data and create the annotations file in CNTK format run the following scripts:
+To download the Pascal data and create the annotation file for Pascal in CNTK format run the following scripts:
 
 ```
 python Examples/Image/DataSets/Pascal/install_pascalvoc.py

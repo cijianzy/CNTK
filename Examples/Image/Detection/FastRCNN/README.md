@@ -31,7 +31,7 @@ We use a toy dataset of images captured from a refrigerator to demonstrate Fast 
 `python install_data_and_model.py`
 
 After running the script, the toy dataset will be installed under the `Image/DataSets/Grocery` folder. The AlexNet model will be downloaded to the `Image/PretrainedModels` folder. 
-We recommend you to keep the downloaded data in the respective folder while downloading, as the configuration files in this folder assumes that by default.
+We recommend you to keep the downloaded data in the respective folder while downloading, as the configuration files assume that by default.
 
 ### Running Fast R-CNN on the example data
 
@@ -41,7 +41,7 @@ To train and evaluate Fast R-CNN run
 
 ### Running Fast R-CNN on Pascal VOC data
 
-To download the Pascal data and create the annotations file in CNTK format run the following scripts:
+To download the Pascal data and create the annotation file for Pascal in CNTK format run the following scripts:
 
 ```
 python Examples/Image/DataSets/Pascal/install_pascalvoc.py
