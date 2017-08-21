@@ -548,7 +548,9 @@ namespace CNTK
 
         valueData = cpuArrayView->DataBuffer<ValueType>();
 
-        auto sampleSize = outputVariable.Shape().TotalSize();
+        auto shape = Shape().SubShape(0, outputVariable.Shape().Rank());
+        //auto sampleSize = outputVariable.Shape().TotalSize();
+        auto sampleSize = shape.TotalSize();
         for (auto seqIndex = 0; seqIndex < numOfSequences; seqIndex++)
         {
             size_t seqStart = seqIndex * maxSequenceLen;

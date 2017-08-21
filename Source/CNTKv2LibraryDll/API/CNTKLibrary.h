@@ -2866,10 +2866,11 @@ namespace CNTK
         template <typename ElementType>
         void ResizeOutputBuffer(const Variable& outputVariable, std::vector<std::vector<ElementType>>& sequences)
         {
-            auto shape = outputVariable.Shape();
-            if (shape.IsUnknown() || shape.HasUnboundDimension())
-                RuntimeError("The outputVariable '%S' shape '%S' is unknown shape, has inferred dimension or free dimension for at least one axis.",
-                              outputVariable.AsString().c_str(), shape.AsString().c_str());
+            //auto shape = outputVariable.Shape();
+            auto shape = Shape().SubShape(0, outputVariable.Shape().Rank());
+            //if (shape.IsUnknown() || shape.HasUnboundDimension())
+            //    RuntimeError("The outputVariable '%S' shape '%S' is unknown shape, has inferred dimension or free dimension for at least one axis.",
+            //                  outputVariable.AsString().c_str(), shape.AsString().c_str());
 
             size_t numOfSequences;
             size_t maxSequenceLen;
